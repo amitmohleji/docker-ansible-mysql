@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+    - name: "Starting Deployment"
+      shell: sleep 2
+    - name: "Stopping Server"
+      shell: sleep 5
+    - name: "Deploying Artifacts"
+      shell: sleep 10  
+    - name: "Starting Server"
+      shell: sleep 5
+    

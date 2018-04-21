@@ -1,0 +1,19 @@
+---
+- hosts: all
+  tasks:
+    - name: "testing echo"
+      shell: echo "hello world"
+    - name: "updating cache"
+      shell: apk update
+    - name: "updating cache"
+      shell: sleep 10  
+    - name: "installing vim"
+      apk: 
+        name: vim
+        state: present
+        update_cache: yes
+    - name: Install Apache 
+      apk: 
+        name: apache2
+        state: latest
+    
